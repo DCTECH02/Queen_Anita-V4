@@ -1,0 +1,26 @@
+{
+  "name": "My WhatsApp Bot",
+  "description": "A multi-device WhatsApp bot deployed on Heroku",
+  "repository": "https://github.com/your-repo", 
+  "stack": "container",
+  "env": {
+    "SESSION_ID": {
+      "description": "Path or identifier for the bot session",
+      "value": "./sessions/default_session" 
+    }
+  },
+  "formation": {
+    "worker": {
+      "quantity": 1,
+      "size": "free"
+    }
+  },
+  "buildpacks": [
+    {
+      "url": "heroku/nodejs"
+    }
+  ],
+  "scripts": {
+    "postdeploy": "node main.js"
+  }
+}
