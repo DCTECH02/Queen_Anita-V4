@@ -7,20 +7,14 @@
     "SESSION_ID": {
       "description": "Path or identifier for the bot session",
       "value": "./sessions/default_session" 
-    }
-  },
-  "formation": {
-    "worker": {
-      "quantity": 1,
-      "size": "free"
-    }
-  },
-  "buildpacks": [
-    {
-      "url": "heroku/nodejs"
-    }
-  ],
-  "scripts": {
-    "postdeploy": "node main.js"
-  }
+}
+
+},
+
+     "buildpacks": [
+        {
+            "url": "https://github.com/heroku/heroku-buildpack-nodejs.git"
+        }
+     ],
+  "stack": "heroku-24"
 }
