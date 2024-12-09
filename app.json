@@ -1,7 +1,7 @@
 {
   "name": "My WhatsApp Bot",
   "description": "A multi-device WhatsApp bot deployed on Heroku",
-  "repository": "https://github.com/your-repo", 
+  "repository": "https://github.com/DCTECH02/Queen_Anita-V4", 
   "stack": "container",
   "env": {
     "SESSION_ID": {
