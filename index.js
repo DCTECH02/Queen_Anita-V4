@@ -1,4 +1,5 @@
-
+const fs = require('fs')
+require('dotenv').config();
 // Adding session handling using SESSION_JSON environment variable
 const sessionInput = process.env.SESSION_ID;
 if (sessionInput) {
@@ -7,13 +8,13 @@ if (sessionInput) {
     fs.writeFileSync(sessionPath, sessionInput, 'utf-8');
     console.log("Session file created successfully from environment variable.");
 } else {
-    console.log("No session JSON provided. Using default method for session.");
+    console.log("No Session ID provided. Using default method for session.");
 }
 
 const { default: makeWASocket, DisconnectReason, makeInMemoryStore, jidDecode, proto, getContentType, useMultiFileAuthState, downloadContentFromMessage } = require("@whiskeysockets/baileys")
 const pino = require('pino')
 const { Boom } = require('@hapi/boom')
-const fs = require('fs')
+
 const FileType = require('file-type')
 const readline = require("readline");
 const path = require('path')
